@@ -82,6 +82,7 @@ for i in my_list:
 print(my_set)
 """
 
+"""
 #5.字典 dict()   {key:value}  key值不能重复  value可以重复  无下标索引  但能通过key访问到对应的value值
             #如果key重复 取最后一个key：value                        return dict[kay] = value
 void_dict = dict()  #或者 void_dict = {}
@@ -137,3 +138,54 @@ for i in stu_score_dict.keys():
 #或者  for i in  stu_score_dict
 
 #字典练习
+staff = {"王力宏":{
+            "部门":"科技部",
+            "工资":3000,
+            "级别":1,
+            },"周杰伦":{
+            "部门":"市场部",
+            "工资":5000,
+            "级别":2
+            },"林俊杰":{
+            "部门":"市场部",
+            "工资":7000,
+            "级别":3
+            },"张学友":{
+            "部门":"科技部",
+            "工资":4000,
+            "级别":1
+            },"刘德华":{
+            "部门":"市场部",
+            "工资":6000,
+            "级别":2
+            }
+         }
+print(f"全体员工当前信息如下{staff}")
+for i in staff:
+    if staff[i]["级别"]==1:
+        staff[i]["级别"]+=1
+        staff[i]["工资"]+=1000
+
+print(f"将级别为1的员工上升一级，工资加1000，操作后为：{staff}")
+"""
+
+#max()  和  min()  函数 根据ASCII表来  对于5种容器都适用
+
+
+
+#容器转换：转列表list()，转元组tuple()，转字符串str()，转集合set()
+#其中字典转列表元组和集合只保留key值，转字符串保留key和value
+
+
+
+#容器排序函数 sorted()  排序后的结果都为列表,相当于转换为列表再排序
+my_list = [5,6,2,5,1,9,8,1,3]
+print(f"排序前{my_list}")
+print(f"排序后的列表{sorted(my_list)}")
+
+my_tuple = (5,6,2,5,1,9,8,1,3)
+print(my_tuple)
+print(sorted(my_tuple))
+
+#降序排序
+print(sorted(my_tuple,reverse=True))
